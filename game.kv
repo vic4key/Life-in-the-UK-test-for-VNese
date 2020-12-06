@@ -53,14 +53,14 @@
                 Widget:
                     size_hint_y: .25
                 WrappedLabel:
-                    text: "[b]Are You Ready To Test Your Knowledge ?[/b]"
-                    pos_hint: {"center_x": .5, "center_y": .6}
+                    text: "[b]Ready To Test Your Knowledge ?[/b]"
+                    pos_hint: {"center_x": .5, "center_y": .47}
                     #the size of the float layout root.width, root.height we are telling it to fill the size of the window dynamically.
-                    font_size: min(root.height, root.width)/20 #if height is 50 and it is divided by 10 then font size becomes 5
+                    font_size: min(root.height, root.width)/13 #if height is 50 and it is divided by 10 then font size becomes 5
                     markup:True
                 MDFillRoundFlatIconButton:
                     icon:"play-circle-outline"
-                    size_hint: .5, None
+                    size_hint: .5, 0.1
                     pos_hint: {"center_x": .5, "center_y": .3}
                     border: (10, 10, 10, 10)
                     width: dp(350)
@@ -98,8 +98,8 @@
                 Widget:
                     size_hint_y: .25
                 WrappedLabel:
-                    text: "[b]Quiz App[/b]"
-                    font_size: min(root.height, root.width)/10 #if height is 50 the font size becomes 5
+                    text: "[b]welcome[/b]"
+                    font_size: min(root.height, root.width) / 8 #if height is 50 the font size becomes 5
                     markup:True
 
                 MDRectangleFlatButton:
@@ -199,21 +199,21 @@
                 BoxLayout:
                     size_hint_y: .45
                     orientation: 'vertical'
-                    padding: [mtx.dp(20), 0]
+                    padding: [mtx.dp(20), mtx.dp(20)]
                     WrappedLabel:
                         font_name:"Alike-Regular.ttf"
-                        text: "[b]USERNAME[/b]"
+                        text: "[b]tell us your name[/b]"
                         font_size: min(root.height, root.width)/10 #if height is 50 the font size becomes 5
                         markup:True
                     FlatInput:
                         id: last_name
-                        hint_text: 'USERNAME'
+                        hint_text: ''
                         bold:True
-                        size_hint_y: .2
+                        size_hint_y: .15
                     Widget:
                         size_hint_y: .3
                     FlatButton:
-                        text: 'Next'
+                        text: "Okay, let's go !"
                         size_hint_y: .2
                         on_release:
                             root.submit_surname()
@@ -227,7 +227,7 @@
                             RoundedRectangle:
                                 pos: self.pos
                                 size: self.size
-                                radius: [30]
+                                radius: [10]
 <FlatButton@Button>:
     background_normal:''
     background_color:(1,1,1,0)
