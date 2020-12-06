@@ -16,7 +16,7 @@ from kivy.utils import get_color_from_hex
 from kivy.core.text import LabelBase
 from kivy.event import EventDispatcher
 from kivymd.uix.button import MDRectangleFlatButton,MDRoundFlatButton,MDRectangleFlatButton,MDRaisedButton
-import json 
+import json
 import requests
 import time
 from kivy.uix.textinput import TextInput
@@ -56,7 +56,7 @@ class ListQuestions():
         self.read_questions()
     def get_question_python(self):
         return self.questions_python[random.randint(0, len(self.questions_python) - 1)] #To avoid list index out of range length should be less than original length
-    def read_questions(self):		
+    def read_questions(self):
         with open(os.getcwd()+'/questions/firebase.json') as json_file:
             #If you have a JSON string, you can parse it by using the json.load() method.
             json_data = json.load(json_file)
@@ -65,7 +65,7 @@ class ListQuestions():
                     self.questions_python.append(Question(q["quest"], q["answer"], q["option2"], q["option3"], q["option4"], q["correct"]))
                     #Stores all questions and their answers are stored in a list
                 else:
-                    print("else")			
+                    print("else")
     def update(self):
         url = "https://samplefirebaseapp-3de75.firebaseio.com/export.json"
         response = request.get(url)
@@ -98,17 +98,17 @@ class TaskCreator():
             option_1 = question_python.answer
             option_2 = question_python.option2
             option_3 = question_python.option3
-            option_4 = question_python.option4 
-            correct_1 = question_python.correct 	
+            option_4 = question_python.option4
+            correct_1 = question_python.correct
         operands = [question_1, answers_1]
         answers = [option_1, option_2, option_3, option_4]
         random.shuffle(answers)
         whole_task = operands + answers + [correct_1]
-        return whole_task    
+        return whole_task
 class AboutScreen(Screen):
     def about_text(self):
         return "Hi\n" \
-               "This is a simple project.\n" 
+               "This is a simple project.\n"
 class CreateAccount(Screen):
     pass
 class StartScreen(Screen):
@@ -136,16 +136,16 @@ class SigninWindow(Screen):
 class HelpScreen(Screen):
     def help_text(self):
         return "Hi \n" \
-            "This game will provide you some questions about General Knowledge.\n"            
+            "This game will provide you some questions about General Knowledge.\n"
 class Menu(Screen):
     def update_game(self):
         pop = Popup(title='Updating', content=Label(text='Questions been updated'), auto_dismiss=False)
         pop.open()
         Clock.schedule_once(self.update, 0)
-        pop.dismiss()	
+        pop.dismiss()
     def update(self,event):
         l = ListQuestions()
-        l.update()  
+        l.update()
 #######################################################################################################################################################################################################################################
 class HomeScreen(Screen):
     pass
@@ -216,22 +216,22 @@ class ActionScreen(Screen):
             self.ids.task.markup = True
             #It shows incorrect button in red colour
             self.ids.task.text = '[color=#ff3333]'+self.task_values[6]+'[/color]'
-            button_pressed.background_normal = './data/error.png'    
+            button_pressed.background_normal = './data/error.png'
         if self.round_number == self.max_rounds:
             self.manager.current = 'result'
         else:
             t2 = threading.Thread(target=self.response)
             t2.start()
-        	
-    def response(self):     
+
+    def response(self):
         time.sleep(0.5) # update widgets after specific time
-        self.ids.label_4.text = str(0)	
+        self.ids.label_4.text = str(0)
         self.ids.button_1.disabled = True
         self.ids.button_2.disabled = True
         self.ids.button_3.disabled = True
-        self.ids.button_4.disabled = True  
+        self.ids.button_4.disabled = True
         # The value of clock is set to 0
-        self.ids.label_4.text = str(0)	  
+        self.ids.label_4.text = str(0)
         time.sleep(0.5)
         self.ids.label_4.text = str(0)
         self.ids.button_1.disabled = False
@@ -279,7 +279,7 @@ class ResultScreen(Screen):
         with open("name.txt") as fobj:
             for surname in fobj:
                 self.surname = surname.rstrip()
-    
+
 ############################################################################################################################################################################################################################################################
 #class PopUpQuit(Popup):
  #   pass
@@ -301,9 +301,9 @@ class GameApp(MDApp):
         self.sm.add_widget(CreateAccount(name='create'))
         #Bind to keyboard to make the back button under android work
         Window.bind(on_keyboard=self.handle_keyboard)
-        self.title = 'GenerealKnowledgeQuiz'
+        self.title = 'Life in the UK test for VNese'
         return self.sm
-    
+
     def handle_keyboard(self, window, key, *largs):
         #keycode 273 equals up button, just for test purposes
         if key == 27 or key == 273:

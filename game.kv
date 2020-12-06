@@ -67,8 +67,8 @@
                     halign: 'center'
                     md_bg_color: 0, 0, 1, 1
                     text_color: 1,1,1,1
-                    bold: True    
-                    text:"PLAY NOW!"
+                    bold: True
+                    text:"TEST NOW"
                     on_release: root.manager.current = 'signin'
 <Menu@Screen>:
     name:'other'
@@ -101,7 +101,7 @@
                     text: "[b]Quiz App[/b]"
                     font_size: min(root.height, root.width)/10 #if height is 50 the font size becomes 5
                     markup:True
-                
+
                 MDRectangleFlatButton:
                     border: (2, 2, 2, 2)
                     width: dp(300)
@@ -112,7 +112,7 @@
                     pos_hint:{'center_x':.5, 'center_y':.5}
                     bold: True
                     halign: 'center'
-                    on_release: 
+                    on_release:
                         root.manager.current = 'game'
                         root.manager.transition.direction = "right"
                     text: 'START'
@@ -164,7 +164,7 @@
                     bold: True
                     text:'QUIT'
                     on_release: exit()
-        
+
 <SigninWindow>:
     name:'signin'
     last_name_text_input: last_name
@@ -297,22 +297,22 @@
                         bold: True
                         color:0,255,255,1
                         font_size:30
-                        on_release:                      
+                        on_release:
                             root.manager.current = 'game'
                             app.root.get_screen('game').current_mode = 2
-                    
+
                 Button:
                     size_hint: 0.5, 0.1
                     pos_hint: {'center_x': 0.45}
                     text: 'back'
                     bold: True
                     color:0,255,255,1
-                    on_release:                 
+                    on_release:
                         root.manager.current = 'menu'
 <ActionScreen>:
     name: "action"
     on_enter: self.new_game()
-    
+
     orientation: 'vertical'
     canvas.before:
         Color:
@@ -373,13 +373,13 @@
                         text: 'BACK'
                         bold: True
                         color:0,255,255,1
-                        on_release:                 
+                        on_release:
                             root.manager.current = 'menu'
 
                 Label:
                     id: task #here this file get questions from database by using id
                     text: ""
-                    text_size: self.width/1.1, None 
+                    text_size: self.width/1.1, None
                     font_size: 22
                     color: 0,255,255,1
                     bold: True
@@ -532,10 +532,10 @@
                         source: './data/star_grey.png'
                     Image:
                         id: star_3
-                        source: './data/star_grey.png'            
+                        source: './data/star_grey.png'
                     Image:
                         id: star_4
-                        source: './data/star_grey.png'            
+                        source: './data/star_grey.png'
                     Image:
                         id: star_5
                         source: './data/star_grey.png'
@@ -555,7 +555,7 @@
                         text: 'Back'
                         bold: True
                         color: 0,255,255,1
-                        on_release:                
+                        on_release:
                             root.manager.current = 'menu'
                     Button:
                         background_normal: './data/normal.png'
@@ -612,7 +612,7 @@
                     size_hint: 0.5, 0.1
                     pos_hint: {'center_x': 0.45}
                     text: 'back'
-                    on_release:                 
+                    on_release:
                         root.manager.current = 'menu'
 <AboutScreen>:
     ScreenManager:
@@ -641,7 +641,7 @@
                     size_hint: 0.9, None
                     pos_hint: {'center_x': 0.45}
                     text: 'back'
-                    on_release:             
+                    on_release:
                         root.manager.current = 'menu'
 <CreateAccount>:
     name:'create'
@@ -709,5 +709,5 @@
                             bold: True
                             on_release:
                                 root.manager.current = "signin"
-                                root.manager.transition.direction = "left"    
-                
+                                root.manager.transition.direction = "left"
+
