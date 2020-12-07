@@ -53,7 +53,7 @@
                 Widget:
                     size_hint_y: .25
                 WrappedLabel:
-                    text: "[b]Ready To Test Your Knowledge ?[/b]"
+                    text: "[b]welcome, have a nice day[/b]"
                     pos_hint: {"center_x": .5, "center_y": .47}
                     #the size of the float layout root.width, root.height we are telling it to fill the size of the window dynamically.
                     font_size: min(root.height, root.width)/13 #if height is 50 and it is divided by 10 then font size becomes 5
@@ -68,7 +68,7 @@
                     md_bg_color: 0, 0, 1, 1
                     text_color: 1,1,1,1
                     bold: True
-                    text:"TEST NOW"
+                    text:"let's go"
                     on_release: root.manager.current = 'signin'
 <Menu@Screen>:
     name:'other'
@@ -98,8 +98,8 @@
                 Widget:
                     size_hint_y: .25
                 WrappedLabel:
-                    text: "[b]welcome[/b]"
-                    font_size: min(root.height, root.width) / 8 #if height is 50 the font size becomes 5
+                    text: "[b]ready to test your knowledge ?[/b]"
+                    font_size: 30 # min(root.height, root.width) / 8 #if height is 50 the font size becomes 5
                     markup:True
 
                 MDRectangleFlatButton:
@@ -209,11 +209,12 @@
                         id: last_name
                         hint_text: ''
                         bold:True
-                        size_hint_y: .15
+                        size_hint_y: .2
+                        padding_x: self.width/2
                     Widget:
                         size_hint_y: .3
                     FlatButton:
-                        text: "Okay, let's go !"
+                        text: "okay, continue"
                         size_hint_y: .2
                         on_release:
                             root.submit_surname()
@@ -504,27 +505,28 @@
                         points: [0,self.size[1],self.size[0],self.size[1],self.size[0],self.size[1]-(.4*self.size[1])]
                 Widget:
                     size_hint_y: .25
-                WrappedLabel:
-                    font_name:"Alike-Regular.ttf"
-                    id: label_4
-                    font_size:50
-                    size_hint: 5, 5
-                    pos_hint: {'center_x': 0.40}
-                    text: ' '
-                    bold: True
-                    color:11,156,49,1
+                # WrappedLabel:
+                #     font_name:"Alike-Regular.ttf"
+                #     id: label_4
+                #     font_size:50
+                #     size_hint: 5, 5
+                #     pos_hint: {'center_x': 0.40}
+                #     text: ' '
+                #     bold: True
+                #     color:11,156,49,1
                 WrappedLabel:
                     id: label_5
                     font_name:"Alike-Regular.ttf"
-                    font_size:50
+                    font_size: 30
                     size_hint: 5, 5
-                    pos_hint: {'center_x': 0.35}
+                    # pos_hint: {'center_x': 0.35, 'center_y': 0.7}
+                    pos_hint: {'center_x': 0.5}
                     text: ' '
                     bold: True
                     color:11,156,49,1
                 BoxLayout:
                     size_hint: 1, 1
-                    pos_hint: {'center_x': 0.45}
+                    pos_hint: {'center_x': 0.5}
                     Image:
                         id: star_1
                         source: './data/star_grey.png'

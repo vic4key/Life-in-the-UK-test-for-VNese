@@ -274,8 +274,8 @@ class ResultScreen(Screen):
             self.ids.label.text = 'Okay...\n\n Try again to get all the stars!'
         self.surname = ''
         self.load()
-        self.ids.label_4.text = "Name: " + str(self.surname)
-        self.ids.label_5.text = "Score:" + str(screen.count)
+        # self.ids.label_4.text = "Name: " + str(self.surname)
+        self.ids.label_5.text = f"your score is {screen.count}" # "Score:" + str(screen.count)
     def load(self):
         with open("name.txt") as fobj:
             for surname in fobj:
