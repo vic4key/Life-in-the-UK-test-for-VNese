@@ -622,6 +622,7 @@
             name: 'scrn_signin'
             BoxLayout:
                 orientation: 'vertical'
+                padding: [mtx.dp(20), mtx.dp(20)]
                 canvas.before:
                     Color:
                         rgba: rgba('#0e1574ff')
@@ -633,11 +634,13 @@
                         points: [0,self.size[1],self.size[0],self.size[1],self.size[0],self.size[1]-(.4*self.size[1])]
                 WrappedLabel:
                     size_hint: 0.15, 0.15
-                    pos_hint: {'center_x': 0.45}
-                    text: 'About'
+                    pos_hint: {'center_x': 0.45, 'center_y': 0.45}
+                    text: 'Life in the UK test for VNese'
                     font_size: 30
                 WrappedLabel:
-                    text: root.about_text()
+                    text: "email : riga.pham@gmail.com" # root.about_text()
+                WrappedLabel:
+                    text: "Thank you for using our application" # root.about_text()
                 MDRoundFlatButton:
                     size_hint: 0.9, None
                     pos_hint: {'center_x': 0.45}

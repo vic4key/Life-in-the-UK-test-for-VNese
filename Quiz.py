@@ -106,9 +106,10 @@ class TaskCreator():
         whole_task = operands + answers + [correct_1]
         return whole_task
 class AboutScreen(Screen):
-    def about_text(self):
-        return "Hi\n" \
-               "This is a simple project.\n"
+    pass
+    # def about_text(self):
+    #     return "Hi\n" \
+    #            "This is a simple project.\n"
 class CreateAccount(Screen):
     pass
 class StartScreen(Screen):
@@ -205,14 +206,14 @@ class ActionScreen(Screen):
             self.count += 2
             self.errors_made = 0
             self.ids.label_2.text = "Score :"+str(self.count)
-            self.ids.label_1.text = "Errors: " + str(self.errors_made)
+            self.ids.label_1.text = "Errors : " + str(self.errors_made)
             self.ids.label_3.text = str(self.round_number) + " / " + str(self.max_rounds)
         #when answer is wrong it goes to else part
         else:
             self.ids.label_3.text = str(self.round_number) + " / " + str(self.max_rounds)
             self.ids.label_2.text = "Score :"+str(self.count)
             self.errors_made += 1
-            self.ids.label_1.text = "Errors: " + str(self.errors_made)
+            self.ids.label_1.text = "Errors : " + str(self.errors_made)
             self.ids.task.markup = True
             #It shows incorrect button in red colour
             self.ids.task.text = '[color=#ff3333]'+self.task_values[6]+'[/color]'
@@ -273,7 +274,7 @@ class ResultScreen(Screen):
             self.ids.label.text = 'Okay...\n\n Try again to get all the stars!'
         self.surname = ''
         self.load()
-        self.ids.label_4.text = "Name:" + str(self.surname)
+        self.ids.label_4.text = "Name: " + str(self.surname)
         self.ids.label_5.text = "Score:" + str(screen.count)
     def load(self):
         with open("name.txt") as fobj:
