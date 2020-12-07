@@ -3,50 +3,50 @@
     "category": "english",
     "url": "https://samplefirebaseapp-3de75.firebaseio.com/questions/1.json",
     "correct": "Correct Answer:Narendra Modi",
-    "quest": "Who is the prime minister of India?",
-    "answer": "Narendra Modi",
-    "option4": "Atalbihari Vajpayee",
-    "option2": "Rahul gandhi",
-    "option3": "Dr. Manmohan Singh"
+    "quest": "Where is Big Ben located?",
+    "answer": "The Houses of the Parliament",
+    "option2": "Buckingham Palace",
+    "option3": "The Tower of London",
+    "option4": "Trafalgar Square"
   },
   {
     "category": "english",
     "url": "https://samplefirebaseapp-3de75.firebaseio.com/questions/2.json",
-    "correct": "Correct Answer:Mahatma Gandhi",
-    "quest": "Who amongst the follwing had called Rabindranath Tagore as THE GREAT SENTINEL?",
-    "answer": "Mahatma Gandhi",
-    "option4": "Abdul Kalam Azad",
-    "option2": "Dr. Rajendra Prasad",
-    "option3": "Subhash Chandra Bose"
+    "correct": "Correct Answer:North west of Europe",
+    "quest": "Where is the UK geographically located?",
+    "answer": "North west of Europe",
+    "option2": "South west of Europe",
+    "option3": "North east of Europe",
+    "option4": "South east of Europe"
   },
   {
     "category": "english",
     "url": "https://samplefirebaseapp-3de75.firebaseio.com/questions/3.json",
-    "correct": "Correct Answer:Largest Railway Station",
-    "quest": "Grand Central Terminal, Park Avenue,New York is the world's",
-    "answer": "Largest Railway Station",
-    "option4": "Highest Railway Station",
-    "option2": "Longest Railway Station",
-    "option3": "None Of The Above"
+    "correct": "Correct Answer:St Andrew",
+    "quest": "Who is the patron Saint of Scotland?",
+    "answer": "St Andrew",
+    "option2": "St David",
+    "option3": "St Patrick",
+    "option4": "St George"
   },
   {
     "category": "english",
     "url": "https://samplefirebaseapp-3de75.firebaseio.com/questions/4.json",
-    "correct": "Correct Answer:Insects",
-    "quest": "Entomology is the science that studies....",
-    "answer": "Insects",
-    "option4": "The origin and history of technical and scitific terms",
-    "option2": "The formation of rocks",
-    "option3": "Behavior OF Human Being"
+    "correct": "Correct Answer:False",
+    "quest": "The Bill of Rights of 1689 confirmed the right to vote for all adult men.",
+    "answer": "False",
+    "option2": "True",
+    "option3": "",
+    "option4": ""
   },
   {
     "category": "english",
     "url": "https://samplefirebaseapp-3de75.firebaseio.com/questions/5.json",
-    "correct": "Correct Answer:Diphu,Assam",
-    "quest": "Garampani sanctuary is located at",
-    "answer": "Diphu,Assam",
-    "option4": "Gangtok,Sikkim",
-    "option2": "Kohima,Nagaland",
-    "option3": "Junagarh,Gujarat"
+    "correct": "Correct Answer:A war memorial",
+    "quest": "What is the Cenotaph?",
+    "answer": "A war memorial",
+    "option2": "A flower",
+    "option3": "A Christian church",
+    "option4": "A theatre"
   }
 ]
