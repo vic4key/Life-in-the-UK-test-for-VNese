@@ -61,7 +61,7 @@ class ListQuestions():
             #If you have a JSON string, you can parse it by using the json.load() method.
             json_data = json.load(json_file)
             for q in json_data:
-                if(q["category"] =="python"):
+                if(q["category"] =="english"):
                     self.questions_python.append(Question(q["quest"], q["answer"], q["option2"], q["option3"], q["option4"], q["correct"]))
                     #Stores all questions and their answers are stored in a list
                 else:
